@@ -13,17 +13,22 @@
                     />
             </div>
         </ul>
+        <div v-else>
+            <Loading/>
+        </div>
     </div>
 </template>
 
 <script>
 import Disc from '@/components/Disc.vue';
+import Loading from '@/components/Loading.vue';
 import axios from 'axios';
 
 export default {
     name: 'Discs',
     components: {
         Disc,
+        Loading,
     },
     data(){
         return{
