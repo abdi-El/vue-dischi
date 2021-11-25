@@ -5,8 +5,11 @@
                 :key='`${disc.title}`'>
                 <Disc  
                     class="disc p-3 h-100"
-                    :img='disc.poster'
+                    :img="disc.poster"
                     :title="disc.title"
+                    :author="disc.author"
+                    :date="disc.year"
+                    :type="disc.genre"
                     />
             </div>
         </ul>

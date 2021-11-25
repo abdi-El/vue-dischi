@@ -25,7 +25,7 @@ export default {
   @import '@/styles/global';
   #app{
     background-color: $main-color;
-    height: 100vh;
+    height: 100%;
     main{
       background-color: $main-color;
     }
