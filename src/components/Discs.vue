@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <ul class="row" v-if="this.discsList != null">
-            <div class="disc-container col-6 col-md-4 col-lg-2 my-3" v-for="disc in this.discsList" 
+        <ul class="row" v-if="discsList != null">
+            <div class="disc-container col-6 col-md-4 col-lg-2 my-3" v-for="disc in discsList" 
                 :key='`${disc.title}`'>
                 <Disc  
                     class="disc p-3 h-100"
@@ -22,7 +22,7 @@
 <script>
 import Disc from '@/components/Disc.vue';
 import Loading from '@/components/Loading.vue';
-import axios from 'axios';
+
 
 export default {
     name: 'Discs',
@@ -30,22 +30,9 @@ export default {
         Disc,
         Loading,
     },
-    data(){
-        return{
-            discsList: null,
-        }
+    props:{
+        discsList: Array
     },
-    created(){
-        this.getSongs();
-    },
-    methods:{
-        getSongs(){
-            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-                .then(result=>{
-                    this.discsList=result.data.response
-                })
-        }
-    }
 }
 </script>
 
