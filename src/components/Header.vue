@@ -3,10 +3,7 @@
         <img src="../assets/img/logo.png" alt="logo" class="h-100">
         <select class="w-25" @change="$emit('genereSelected', selected)" v-model="selected">
             <option value="">Select</option>
-            <option value="Rock">Rock</option>
-            <option value="Pop">Pop</option>
-            <option value="Metal">Metal</option>
-            <option value="Jazz">Jazz</option>
+            <option v-for='(genere, index) in genereList' :key='genere[index]' :value="genere">{{genere}}</option>
         </select>   
     </header>
 </template>
@@ -18,6 +15,9 @@ export default {
         return{
             selected:'',
         }
+    },
+    props:{
+        genereList: Array
     },
     methods:{
         logLog(){
