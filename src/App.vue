@@ -68,6 +68,7 @@ export default {
     background-color: $main-color;
     main{
       background-color: $main-color;
+      min-height: 110vh;
     }
   }
 </style>

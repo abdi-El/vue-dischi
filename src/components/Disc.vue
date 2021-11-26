@@ -23,10 +23,27 @@ export default {
 
 <style scoped lang='scss'>
     @import '@/styles/global';
-    img{
-        margin: 10px 0;
-    }
-    .author, .date{
-        color: #6f7579;
+    div{
+        border-radius: 10px;
+        transition: scale 0.1s, box-shadow 0.1s;
+        &:hover{
+            scale: 1.03;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+        }
+        &:active{
+            scale: 1;
+            cursor: pointer;
+            box-shadow:none;
+        }
+        img{
+            margin: 10px 0;
+        }
+        h6:hover{
+            color: $main-color;
+        }
+        .author, .date{
+            color: #6f7579;
+        }
     }
 </style>
