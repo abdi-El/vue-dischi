@@ -29,7 +29,7 @@ export default {
         &:hover{
             scale: 1.03;
             cursor: pointer;
-            box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+            box-shadow: 5px 5px 2px rgba(0,0,0,0.2);
         }
         &:active{
             scale: 1;

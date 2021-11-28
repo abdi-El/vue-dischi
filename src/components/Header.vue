@@ -2,7 +2,7 @@
     <header class="p-2 d-flex justify-content-between"> 
         <img src="../assets/img/logo.png" alt="logo" class="h-100">
         <select class="w-25" @change="$emit('genereSelected', selected)" v-model="selected">
-            <option value="">&#10140; Please select a genre</option>
+            <option value="">&#10140; all genres</option>
             <option v-for='(genere, index) in genereList' :key='genere[index]' :value="genere">{{genere}}</option>
         </select>   
     </header>
@@ -19,11 +19,6 @@ export default {
     props:{
         genereList: Array
     },
-    methods:{
-        logLog(){
-            console.log(this.selected)
-        }
-    }
 }
 </script>
 

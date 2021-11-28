@@ -41,10 +41,6 @@ export default {
     genereSelected(selected){
       this.genere=selected
     },
-    generateList(){
-      
-    }
-
   },
   created(){
     this.getSongs()
